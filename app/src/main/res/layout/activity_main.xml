@@ -9,281 +9,333 @@
 
     <Button
 
-        android:id="@+id/button"
+        android:id="@+id/btMenuSalad"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuFirstBluda" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvMenuSalad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Салаты"
         style="@style/text_on_button"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuSalad"
         app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuSalad"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuSalad"
         app:layout_constraintVertical_bias="0.296" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/ivMenuSalad"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSalad"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSalad"
+        app:layout_constraintTop_toTopOf="@+id/btMenuSalad"
         app:srcCompat="@mipmap/salad" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btMenuMeat"
         style="@style/menu_buttons"
         android:layout_marginStart="8dp"
         android:alpha="0.4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.013"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuBack"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btMenuFirstBluda"
         style="@style/menu_buttons"
         android:layout_marginEnd="8dp"
         android:alpha="0.4"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btMenuZakuski"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btMenuVipechka"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuZakuski" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btMenuDesert"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuSalad" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btMenuSous"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuVipechka" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btMenuJuice"
         style="@style/menu_buttons"
         android:alpha="0.4"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
+        app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuDesert" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/ivMenuMeat"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/meat" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/ivMenuFirstBluda"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/btMenuSalad"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toTopOf="@+id/btMenuFirstBluda"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/sup" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/ivMenuZakuski"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuZakuski"
+        app:layout_constraintStart_toStartOf="@+id/btMenuZakuski"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/panini" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/ivMenuVipechka"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuVipechka"
+        app:layout_constraintStart_toStartOf="@+id/btMenuVipechka"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuZakuski"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/cake" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/ivMenuDesert"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="@+id/button9"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuDesert"
         app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/btMenuDesert"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuSalad"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/icecream" />
+        app:srcCompat="@drawable/desert1" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/ivMenuSous"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button10"
-        app:layout_constraintEnd_toEndOf="@+id/button10"
-        app:layout_constraintStart_toStartOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSous"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSous"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuVipechka"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/sous" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/ivMenuJuice"
         android:layout_width="125dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button11"
-        app:layout_constraintEnd_toEndOf="@+id/button11"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuJuice"
         app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/btMenuSous"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuDesert"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/juice" />
+        app:srcCompat="@mipmap/juice1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvMenuMeat"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Мясные блюда"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView11"
-        app:layout_constraintStart_toStartOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuMeat"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvMenuFirstBluda"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Первые блюда"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintBottom_toTopOf="@+id/btMenuSalad"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuFirstBluda"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvMenuZakuski"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Закуски"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuZakuski"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuZakuski"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuZakuski"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvMenuVipechka"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Выпечка"
-        app:layout_constraintBottom_toBottomOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuVipechka"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuVipechka"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuVipechka"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvMenuDesert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Десерты"
         style="@style/text_on_button"
-        app:layout_constraintBottom_toBottomOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuDesert"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuDesert"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuDesert"
         app:layout_constraintVertical_bias="0.16" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tvMenuSous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Соусы"
         style="@style/text_on_button"
-        app:layout_constraintBottom_toBottomOf="@+id/button10"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuSous"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuSous"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuSous"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tvMenuJuice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Напитки"
         style="@style/text_on_button"
-        app:layout_constraintBottom_toBottomOf="@+id/button11"
-        app:layout_constraintEnd_toEndOf="@+id/imageView17"
-        app:layout_constraintStart_toStartOf="@+id/imageView17"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuJuice"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuJuice"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuJuice"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btMenuSoveti"
+        style="@style/menu_buttons"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuJuice"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSous"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuSous"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btMenuBack"
+        style="@style/menu_buttons"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMenuBack"
+        style="@style/text_on_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Выйти из приложения"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuBack"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/btMenuBack"
+        app:layout_constraintTop_toTopOf="@+id/btMenuBack" />
+
+    <TextView
+        android:id="@+id/tvMenuSoveti"
+        style="@style/text_on_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Полезные советы"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSoveti"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSoveti"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSoveti"
+        app:layout_constraintTop_toTopOf="@+id/btMenuSoveti" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
