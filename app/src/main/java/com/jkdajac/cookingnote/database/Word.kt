@@ -4,10 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class Meat(
-    val etEditMeatName: String,
-    val etEditMeatContent: String
-)
+class Word(
+    val englishWord: String,
+    val translateWord: String
+        )
 
 {
     @PrimaryKey(autoGenerate = true)

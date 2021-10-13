@@ -10,62 +10,36 @@ import com.jkdajac.cookingnote.MainActivity
 import com.jkdajac.cookingnote.R
 import com.jkdajac.cookingnote.adapters.MeatAdapter
 import com.jkdajac.cookingnote.database.AppDatabase
-import com.jkdajac.cookingnote.database.Meat
 import com.jkdajac.cookingnote.database.MyIntentConstance
+import com.jkdajac.cookingnote.database.Word
 import kotlinx.android.synthetic.main.activity_edit_meat.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.btMenuBack
 import kotlinx.android.synthetic.main.activity_meat.*
 
 class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
 
     lateinit var adapter: MeatAdapter
-    lateinit var meatDatabase: AppDatabase
-    lateinit var meatList: ArrayList<Meat>
+    lateinit var wordDatabase: AppDatabase
+    lateinit var wordList: ArrayList<Word>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meat)
 
-        getMyIntents()
 
-        meatList = ArrayList<Meat>()
-        meatDatabase = AppDatabase.getDatabase(this)
+
+        wordList = ArrayList<Word>()
+        wordDatabase = AppDatabase.getDatabase(this)
         getData()
-        adapter = MeatAdapter(this, meatList, this)
+        adapter = MeatAdapter(this, wordList, this)
         rvMeat.layoutManager = LinearLayoutManager(this)
         rvMeat.adapter = adapter
 
-        meatDatabase = AppDatabase.getDatabase(this)
-
-        floatingMeatSave.setOnClickListener {
-            val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
-            floatingMeatSave.startAnimation(animation)
-
-            if (etEditMeatName.text.isNotEmpty() && etEditMeatContent.text.isNotEmpty()) {
-                val etEditMeatName: String = etEditMeatName.text.toString()
-                val etEditMeatContent: String = etEditMeatContent.text.toString()
+        wordDatabase = AppDatabase.getDatabase(this)
 
 
-                val meat = Meat(
-                    etEditMeatName = etEditMeatName,
-                    etEditMeatContent = etEditMeatContent.toString()
-                )
-                Toast.makeText(this, "English word and translation full !", Toast.LENGTH_LONG)
-                    .show()
-                meatDatabase.meatDao().insertMeat(meat)
 
-                val intent = Intent(this, MeatActivity::class.java)
-                startActivity(intent)
-            } else {
-                Toast.makeText(
-                    this, "Full in the fields" + "\"English word\"" + "and" + "\"Translate\"",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        }
 
-    btMeatBack.setOnClickListener {
+        btMeatBack.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
             tvMeatBack.startAnimation(animation)
             btMeatBack.startAnimation(animation)
@@ -73,7 +47,6 @@ class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
             startActivity(intent)
 
         }
-
         floatingMeat.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
             floatingMeat.startAnimation(animation)
@@ -81,25 +54,20 @@ class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
             startActivity(intent)
         }
     }
+
     fun getData() {
-        val meatFromDb: List<Meat> = meatDatabase.meatDao().getAll()
-        meatList.clear()
-        meatList.addAll(meatFromDb)
+        val wordFromDb: List<Word> = wordDatabase.wordDao().getAll()
+        wordList.clear()
+        wordList.addAll(wordFromDb)
     }
 
-    fun getMyIntents(){
 
-        val i = intent
-
-        if(i != null){
-            if(i.getStringExtra(MyIntentConstance.I_NAME_KEY) != null){
-                etEditMeatName.setText(i.getStringExtra(MyIntentConstance.I_NAME_KEY))
-                etEditMeatContent.setText(i.getStringExtra(MyIntentConstance.I_CONTENT_KEY))
-            }
-        }
-    }
 
     override fun deleteItem(index: Int) {
-        TODO("Not yet implemented")
+        val word = wordList[index]
+        wordDatabase.wordDao().deleteWord(word)
+        getData()
+        adapter.notifyDataSetChanged()
     }
+
 }

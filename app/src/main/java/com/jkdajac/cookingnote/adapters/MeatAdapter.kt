@@ -9,13 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jkdajac.cookingnote.R
-import com.jkdajac.cookingnote.database.Meat
 import com.jkdajac.cookingnote.database.MyIntentConstance
+import com.jkdajac.cookingnote.database.Word
+import com.jkdajac.cookingnote.meat.EditMeatActivity
 import com.jkdajac.cookingnote.meat.MeatActivity
 import kotlinx.android.synthetic.main.item_meat.view.*
 
 class MeatAdapter(val contextA: Context,
-                  val meatList: List<Meat>,
+                  val meatList: List<Word>,
                   val callback: ViewHolder.ItemCallback
 ) : RecyclerView.Adapter<MeatAdapter.ViewHolder>(){
 
@@ -26,7 +27,8 @@ class MeatAdapter(val contextA: Context,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(meatList[position])
-        holder.editMeatName?.text = meatList[position].etEditMeatName
+        holder.englishWord?.text = meatList[position].englishWord
+        holder.translateWord?.text = meatList[position].translateWord
         //holder.translateWord?.text = meatList[position].translateWord
 //        holder.closeItem?.setOnClickListener {
 //            callback.closeItem(position)
@@ -48,14 +50,16 @@ class MeatAdapter(val contextA: Context,
     class ViewHolder(itemView : View, contextV: Context)  : RecyclerView.ViewHolder(itemView){
 
         val context = contextV
-        var editMeatName: TextView? = null
+        var englishWord: TextView? = null
+        var translateWord: TextView? = null
         //var translateWord: TextView? = null
         var deleteItem : ImageView? = null
 //        var openItem : ImageView? = null
 //        var closeItem : ImageView? = null
 
         init{
-            editMeatName = itemView.tvItemMeat
+            englishWord = itemView.tvItemMeat
+            translateWord = itemView.tvItemContent
             //translateWord = itemView.tvI
             deleteItem = itemView.ivItemMeatDelete
 //            openItem = itemView.ivOpenTranslate
@@ -63,12 +67,12 @@ class MeatAdapter(val contextA: Context,
 
         }
 
-        fun setData(item : Meat){
+        fun setData(item : Word){
 
             itemView.setOnClickListener {
-                val intent = Intent(context, MeatActivity :: class.java).apply {
-                    putExtra(MyIntentConstance.I_NAME_KEY, item.etEditMeatName)
-                    putExtra(MyIntentConstance.I_CONTENT_KEY, item.etEditMeatContent)
+                val intent = Intent(context, EditMeatActivity :: class.java).apply {
+                    putExtra(MyIntentConstance.I_NAME_KEY, item.englishWord)
+                    putExtra(MyIntentConstance.I_CONTENT_KEY, item.translateWord)
                 }
                 context.startActivity(intent)
             }

@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = arrayOf(Meat::class), version = 1)
+@Database(entities = arrayOf(Word::class), version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun meatDao(): MeatDao
+    abstract fun wordDao(): WordDao
 
     companion object {
         @Volatile
@@ -19,7 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "meat_database")
+                    "word_database")
                     .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance
