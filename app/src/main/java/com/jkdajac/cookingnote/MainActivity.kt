@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import com.jkdajac.cookingnote.firstbluda.FirstBludaActivity
 import com.jkdajac.cookingnote.meat.MeatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
@@ -57,6 +58,8 @@ class MainActivity : AppCompatActivity() {
             btMenuFirstBluda.startAnimation(animation)
             tvMenuFirstBluda.startAnimation(animation)
             ivMenuFirstBluda.startAnimation(animation)
+            val intent = Intent(this, FirstBludaActivity::class.java)
+            startActivity(intent)
         }
 
         btMenuSalad.setOnClickListener {

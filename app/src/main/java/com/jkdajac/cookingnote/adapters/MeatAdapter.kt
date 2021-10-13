@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jkdajac.cookingnote.R
 import com.jkdajac.cookingnote.database.MyIntentConstance
 import com.jkdajac.cookingnote.database.Word
+import com.jkdajac.cookingnote.firstbluda.EditFirstbludaActivity
 import com.jkdajac.cookingnote.meat.EditMeatActivity
-import com.jkdajac.cookingnote.meat.MeatActivity
 import kotlinx.android.synthetic.main.item_meat.view.*
 
 class MeatAdapter(val contextA: Context,
@@ -27,6 +27,7 @@ class MeatAdapter(val contextA: Context,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(meatList[position])
+        holder.setData2(meatList[position])
         holder.englishWord?.text = meatList[position].englishWord
         holder.translateWord?.text = meatList[position].translateWord
         //holder.translateWord?.text = meatList[position].translateWord
@@ -68,7 +69,6 @@ class MeatAdapter(val contextA: Context,
         }
 
         fun setData(item : Word){
-
             itemView.setOnClickListener {
                 val intent = Intent(context, EditMeatActivity :: class.java).apply {
                     putExtra(MyIntentConstance.I_NAME_KEY, item.englishWord)
@@ -76,8 +76,16 @@ class MeatAdapter(val contextA: Context,
                 }
                 context.startActivity(intent)
             }
+        }
 
-
+        fun setData2(item: Word) {
+            itemView.setOnClickListener {
+            val intent1 = Intent(context, EditFirstbludaActivity :: class.java).apply {
+                putExtra(MyIntentConstance.I_BLUDANAME_KEY, item.englishWord)
+                putExtra(MyIntentConstance.I_BLUDACONTENT_KEY, item.translateWord)
+            }
+            context.startActivity(intent1)
+        }
         }
 
         interface ItemCallback {

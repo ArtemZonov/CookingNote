@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CookingNote">
-        <activity android:name=".firstbluda.FirstBludaActivity"></activity>
+        <activity android:name=".firstbluda.EditFirstbludaActivity"></activity>
+        <activity android:name=".firstbluda.FirstBludaActivity" />
         <activity android:name=".meat.EditMeatActivity" />
         <activity android:name=".meat.MeatActivity" />
         <activity android:name=".MainActivity">
