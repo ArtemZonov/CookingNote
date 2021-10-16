@@ -6,21 +6,20 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.jkdajac.cookingnote.R
-import com.jkdajac.cookingnote.database.AppDatabase
-import com.jkdajac.cookingnote.database.MyIntentConstance
-import com.jkdajac.cookingnote.database.Word
+import com.jkdajac.cookingnote.MyIntentConstance
+import com.jkdajac.cookingnote.database.firstbluda.Firstbluda
 import kotlinx.android.synthetic.main.activity_edit_firstbluda.*
 
 class EditFirstbludaActivity : AppCompatActivity() {
 
-    lateinit var bludaDatabase: AppDatabase
+    lateinit var bludaDatabase: com.jkdajac.cookingnote.database.firstbluda.AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_firstbluda)
 
         getMyIntents()
-        bludaDatabase = AppDatabase.getDatabase(this)
+        bludaDatabase = com.jkdajac.cookingnote.database.firstbluda.AppDatabase.getDatabase(this)
 
         floatingFirstbludaSaved.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
@@ -31,10 +30,10 @@ class EditFirstbludaActivity : AppCompatActivity() {
                 val translateWord: String = etEditFirstbludaContent.text.toString()
 
 
-                val word = Word(englishWord = englishWord, translateWord = translateWord)
+                val firstbluda = Firstbluda(englishWord = englishWord, translateWord = translateWord)
                 Toast.makeText(this, "Ваш рецепт записан !", Toast.LENGTH_LONG)
                     .show()
-               bludaDatabase.wordDao().insertWord(word)
+              bludaDatabase.firstbludaDao().insertFirstbluda(firstbluda)
 
                 val intent = Intent(this, FirstBludaActivity::class.java)
                 startActivity(intent)

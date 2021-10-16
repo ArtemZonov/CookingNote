@@ -1,13 +1,13 @@
-package com.jkdajac.cookingnote.database
+package com.jkdajac.cookingnote.database.zakuski
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class Word(
+class Zakuski (
     val englishWord: String,
     val translateWord: String
-        )
+)
 
 {
     @PrimaryKey(autoGenerate = true)

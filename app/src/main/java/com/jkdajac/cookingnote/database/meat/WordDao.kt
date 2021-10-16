@@ -1,16 +1,16 @@
-package com.jkdajac.cookingnote.database
+package com.jkdajac.cookingnote.database.meat
 
 import androidx.room.*
+import com.jkdajac.cookingnote.database.meat.Word
 
 
-
-    @Dao
+@Dao
     interface WordDao {
         @Query("SELECT * FROM word")
         fun getAll(): List<Word>
 
         @Insert
-        fun insertWord(word:Word)
+        fun insertWord(word: Word)
 
         @Delete
         fun deleteWord(word : Word)

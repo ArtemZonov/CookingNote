@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.jkdajac.cookingnote.R
-import com.jkdajac.cookingnote.database.AppDatabase
-import com.jkdajac.cookingnote.database.MyIntentConstance
-import com.jkdajac.cookingnote.database.Word
+import com.jkdajac.cookingnote.database.meat.AppDatabase
+import com.jkdajac.cookingnote.MyIntentConstance
+import com.jkdajac.cookingnote.database.meat.Word
 import kotlinx.android.synthetic.main.activity_edit_meat.*
 
 

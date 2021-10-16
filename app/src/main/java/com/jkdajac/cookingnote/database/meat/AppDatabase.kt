@@ -1,4 +1,4 @@
-package com.jkdajac.cookingnote.database
+package com.jkdajac.cookingnote.database.meat
 
 import android.content.Context
 import androidx.room.Database

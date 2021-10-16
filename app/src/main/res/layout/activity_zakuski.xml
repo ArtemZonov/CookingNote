@@ -8,7 +8,7 @@
     tools:context=".meat.MeatActivity">
 
     <Button
-        android:id="@+id/btMeatBack"
+        android:id="@+id/btZakuskiBack"
         style="@style/menu_buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -28,23 +28,23 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="Выйти на главную"
-        app:layout_constraintBottom_toBottomOf="@+id/btMeatBack"
+        app:layout_constraintBottom_toBottomOf="@+id/btZakuskiBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btMeatBack"
-        app:layout_constraintTop_toTopOf="@+id/btMeatBack" />
+        app:layout_constraintStart_toStartOf="@+id/btZakuskiBack"
+        app:layout_constraintTop_toTopOf="@+id/btZakuskiBack" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMeat"
+        android:id="@+id/rvZakuski"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btMeatBack" />
+        app:layout_constraintTop_toBottomOf="@+id/btZakuskiBack" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingMeat"
+        android:id="@+id/floatingZakuskiEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"

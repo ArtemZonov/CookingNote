@@ -4,15 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jkdajac.cookingnote.MainActivity
 import com.jkdajac.cookingnote.R
 import com.jkdajac.cookingnote.adapters.MeatAdapter
-import com.jkdajac.cookingnote.database.AppDatabase
-import com.jkdajac.cookingnote.database.MyIntentConstance
-import com.jkdajac.cookingnote.database.Word
-import kotlinx.android.synthetic.main.activity_edit_meat.*
+import com.jkdajac.cookingnote.database.meat.AppDatabase
+import com.jkdajac.cookingnote.database.meat.Word
 import kotlinx.android.synthetic.main.activity_meat.*
 
 class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
@@ -41,7 +38,7 @@ class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
 
         btMeatBack.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
-            tvMeatBack.startAnimation(animation)
+            tvZakuskiBack.startAnimation(animation)
             btMeatBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

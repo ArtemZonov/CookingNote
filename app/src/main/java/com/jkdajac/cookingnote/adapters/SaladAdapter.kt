@@ -8,61 +8,63 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.jkdajac.cookingnote.R
 import com.jkdajac.cookingnote.MyIntentConstance
-import com.jkdajac.cookingnote.database.meat.Word
-import com.jkdajac.cookingnote.meat.EditMeatActivity
+import com.jkdajac.cookingnote.R
+import com.jkdajac.cookingnote.database.salad.Salad
+import com.jkdajac.cookingnote.salad.EditSaladActivity
+import com.jkdajac.cookingnote.salad.SaladActivity
+
 import kotlinx.android.synthetic.main.item_meat.view.*
 
-class MeatAdapter(val contextA: Context,
-                  val meatList: List<Word>,
-                  val callback: ViewHolder.ItemCallback
-) : RecyclerView.Adapter<MeatAdapter.ViewHolder>(){
+
+class SaladAdapter(val contextA: Context,
+                   val saladList: List<Salad>,
+                   val callback: SaladActivity
+) : RecyclerView.Adapter<SaladAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(contextA).inflate(R.layout.item_meat, parent, false), contextA)
+        return  ViewHolder(LayoutInflater.from(contextA).inflate(R.layout.item_meat, parent, false), contextA)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.setData(meatList[position])
-        holder.englishWord?.text = meatList[position].englishWord
-        holder.translateWord?.text = meatList[position].translateWord
+        holder.setData(saladList[position])
+        holder.englishWord?.text = saladList[position].englishWord
+        holder.translateWord?.text = saladList[position].translateWord
         holder.deleteItem?.setOnClickListener {
             callback.deleteItem(position)
         }
-
     }
 
     override fun getItemCount(): Int {
-        return meatList.size
+        return  saladList.size
     }
 
-    class ViewHolder(itemView : View, contextV: Context)  : RecyclerView.ViewHolder(itemView){
-
+    class ViewHolder(itemView : View, contextV: Context)  : RecyclerView.ViewHolder(itemView) {
         val context = contextV
         var englishWord: TextView? = null
         var translateWord: TextView? = null
         var deleteItem : ImageView? = null
+
 
         init{
             englishWord = itemView.tvItemMeat
             translateWord = itemView.tvItemContent
             deleteItem = itemView.ivItemMeatDelete
         }
-
-        fun setData(item : Word){
-            itemView.setOnClickListener {
-                val intent = Intent(context, EditMeatActivity :: class.java).apply {
-                    putExtra(MyIntentConstance.I_NAME_KEY, item.englishWord)
-                    putExtra(MyIntentConstance.I_CONTENT_KEY, item.translateWord)
-                }
-                context.startActivity(intent)
-            }
-        }
         interface ItemCallback {
             fun deleteItem(index: Int)
         }
 
+        fun setData(item: Salad) {
+            itemView.setOnClickListener {
+                val intent = Intent(context, EditSaladActivity::class.java).apply {
+                    putExtra(MyIntentConstance.I_SALADNAME_KEY, item.englishWord)
+                    putExtra(MyIntentConstance.I_SALADCONTENT_KEY, item.translateWord)
+                }
+                context.startActivity(intent)
+            }
+        }
     }
+
 }

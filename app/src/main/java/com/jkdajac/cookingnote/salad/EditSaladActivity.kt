@@ -1,0 +1,66 @@
+package com.jkdajac.cookingnote.salad
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.Toast
+import com.jkdajac.cookingnote.MyIntentConstance
+import com.jkdajac.cookingnote.R
+import com.jkdajac.cookingnote.database.salad.Salad
+import com.jkdajac.cookingnote.database.zakuski.AppDatabase
+import com.jkdajac.cookingnote.database.zakuski.Zakuski
+import com.jkdajac.cookingnote.zakuski.ZakuskiActivity
+import kotlinx.android.synthetic.main.activity_edit_salad.*
+import kotlinx.android.synthetic.main.activity_edit_zakuski.*
+import kotlinx.android.synthetic.main.activity_edit_zakuski.floatingZakuskiSaved
+
+class EditSaladActivity : AppCompatActivity() {
+
+    lateinit var saladDatabase: com.jkdajac.cookingnote.database.salad.AppDatabase
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_edit_salad)
+
+        getMyIntents()
+        saladDatabase = com.jkdajac.cookingnote.database.salad.AppDatabase.getDatabase(this)
+
+        floatingSaladSaved.setOnClickListener {
+            val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
+            floatingSaladSaved.startAnimation(animation)
+
+            if (etEditSaladName.text.isNotEmpty() && etEditSaladContent.text.isNotEmpty()) {
+                val englishWord: String = etEditSaladName.text.toString()
+                val translateWord: String = etEditSaladContent.text.toString()
+
+
+                val salad = Salad(englishWord = englishWord, translateWord = translateWord)
+                Toast.makeText(this, "Ваш рецепт записан !", Toast.LENGTH_LONG)
+                    .show()
+                saladDatabase.saladDao().insertSalad(salad)
+
+                val intent = Intent(this, SaladActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    this, "Пожалуйста, заполните пустые поля !",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            finish()
+        }
+    }
+
+    fun getMyIntents() {
+
+        val i = intent
+
+        if (i != null) {
+            if (i.getStringExtra(MyIntentConstance.I_SALADNAME_KEY) != null) {
+                etEditSaladName.setText(i.getStringExtra(MyIntentConstance.I_SALADNAME_KEY))
+                etEditSaladContent.setText(i.getStringExtra(MyIntentConstance.I_SALADCONTENT_KEY))
+            }
+        }
+    }
+    }
