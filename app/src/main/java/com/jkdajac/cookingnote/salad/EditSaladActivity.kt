@@ -8,12 +8,7 @@ import android.widget.Toast
 import com.jkdajac.cookingnote.MyIntentConstance
 import com.jkdajac.cookingnote.R
 import com.jkdajac.cookingnote.database.salad.Salad
-import com.jkdajac.cookingnote.database.zakuski.AppDatabase
-import com.jkdajac.cookingnote.database.zakuski.Zakuski
-import com.jkdajac.cookingnote.zakuski.ZakuskiActivity
 import kotlinx.android.synthetic.main.activity_edit_salad.*
-import kotlinx.android.synthetic.main.activity_edit_zakuski.*
-import kotlinx.android.synthetic.main.activity_edit_zakuski.floatingZakuskiSaved
 
 class EditSaladActivity : AppCompatActivity() {
 

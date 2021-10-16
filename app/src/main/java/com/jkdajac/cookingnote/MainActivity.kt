@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import com.jkdajac.cookingnote.desert.DesertActivity
 import com.jkdajac.cookingnote.firstbluda.FirstBludaActivity
 import com.jkdajac.cookingnote.meat.MeatActivity
 import com.jkdajac.cookingnote.salad.SaladActivity
+import com.jkdajac.cookingnote.vipechka.VipechkaActivity
 import com.jkdajac.cookingnote.zakuski.ZakuskiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
@@ -48,6 +50,8 @@ class MainActivity : AppCompatActivity() {
             btMenuVipechka.startAnimation(animation)
             tvMenuVipechka.startAnimation(animation)
             ivMenuVipechka.startAnimation(animation)
+            val intent = Intent(this, VipechkaActivity::class.java)
+            startActivity(intent)
         }
 
         btMenuSous.setOnClickListener {
@@ -80,6 +84,8 @@ class MainActivity : AppCompatActivity() {
             btMenuDesert.startAnimation(animation)
             tvMenuDesert.startAnimation(animation)
             ivMenuDesert.startAnimation(animation)
+            val intent = Intent(this, DesertActivity::class.java)
+            startActivity(intent)
         }
 
         btMenuJuice.setOnClickListener {

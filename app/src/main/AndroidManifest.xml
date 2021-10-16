@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CookingNote">
-        <activity android:name=".salad.EditSaladActivity"></activity>
+        <activity android:name=".desert.EditDesertActivity"></activity>
+        <activity android:name=".desert.DesertActivity" />
+        <activity android:name=".vipechka.EditVipechkaActivity" />
+        <activity android:name=".vipechka.VipechkaActivity" />
+        <activity android:name=".salad.EditSaladActivity" />
         <activity android:name=".salad.SaladActivity" />
         <activity android:name=".zakuski.EditZakuskiActivity" />
         <activity android:name=".zakuski.ZakuskiActivity" />
