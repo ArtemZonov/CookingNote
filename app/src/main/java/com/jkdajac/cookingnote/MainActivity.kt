@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import com.jkdajac.cookingnote.desert.DesertActivity
 import com.jkdajac.cookingnote.firstbluda.FirstBludaActivity
+import com.jkdajac.cookingnote.juice.JuiceActivity
 import com.jkdajac.cookingnote.meat.MeatActivity
 import com.jkdajac.cookingnote.salad.SaladActivity
+import com.jkdajac.cookingnote.sous.SousActivity
+import com.jkdajac.cookingnote.soveti.SovetiActivity
 import com.jkdajac.cookingnote.vipechka.VipechkaActivity
 import com.jkdajac.cookingnote.zakuski.ZakuskiActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,12 +23,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
-        tvMenuBack.setOnClickListener {
-            finishAffinity()
-        }
 
         btMenuMeat.setOnClickListener {
                 val animation = AnimationUtils.loadAnimation(this@MainActivity, R.anim.scale)
@@ -59,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             btMenuSous.startAnimation(animation)
             tvMenuSous.startAnimation(animation)
             ivMenuSous.startAnimation(animation)
+            val intent = Intent(this, SousActivity::class.java)
+            startActivity(intent)
         }
 
         btMenuFirstBluda.setOnClickListener {
@@ -93,17 +92,22 @@ class MainActivity : AppCompatActivity() {
             btMenuJuice.startAnimation(animation)
             tvMenuJuice.startAnimation(animation)
             ivMenuJuice.startAnimation(animation)
+            val intent = Intent(this, JuiceActivity::class.java)
+            startActivity(intent)
         }
 
         btMenuSoveti.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
             btMenuSoveti.startAnimation(animation)
             tvMenuSoveti.startAnimation(animation)
+            val intent = Intent(this, SovetiActivity::class.java)
+            startActivity(intent)
         }
         btMenuBack.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
             tvMenuBack.startAnimation(animation)
             btMenuBack.startAnimation(animation)
+            finishAffinity()
         }
     }
 }

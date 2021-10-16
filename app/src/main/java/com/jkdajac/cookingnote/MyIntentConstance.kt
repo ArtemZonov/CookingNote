@@ -13,4 +13,8 @@ object MyIntentConstance {
     const val I_VIPECHKACONTENT_KEY = "vipechkacontent_key"
     const val I_DESERTNAME_KEY = "desertname_key"
     const val I_DESERTCONTENT_KEY = "desertcontent_key"
+    const val I_JUICENAME_KEY = "juicename_key"
+    const val I_JUICECONTENT_KEY = "juicecontent_key"
+    const val I_SOUSNAME_KEY = "sousname_key"
+    const val I_SOUSCONTENT_KEY = "souscontent_key"
 }
