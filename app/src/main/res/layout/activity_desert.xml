@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="Выйти на главную"
+        android:text="@string/toUp"
         app:layout_constraintBottom_toBottomOf="@+id/btDesertBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btDesertBack"

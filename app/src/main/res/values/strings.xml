@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">CookingNote</string>
+    <string name="app_name">Кулинарный блокнот</string>
+    <string name="exit">Выйти из программы</string>
+    <string name="meat">Мясо и рыба</string>
+    <string name="soup">Первые блюда</string>
+    <string name="zakuski">Закуски</string>
+    <string name="salad">Салаты</string>
+    <string name="vipechka">Выпечка</string>
+    <string name="desert">Десерты</string>
+    <string name="sous">Соусы</string>
+    <string name="juice">Напитки</string>
+    <string name="soveti2">Полезные советы</string>
+    <string name="toUp">Выйти на главную</string>
+    <string name="hintName">Напишите здесь название рецепта</string>
+    <string name="hintContent">Напишите здесь свой рецепт</string>
+    <string name="sovett">Запишите здесь ваш совет</string>
+    <string name="prostoSovet">Просто совет</string>
+    <string name="pictureSovet">Советы в картинках</string>
 
     <string name="soveti">
                 \t\tЛук, морковь и помидоры перед внесением в блюдо рекомендуется спассеровать – это позволяет

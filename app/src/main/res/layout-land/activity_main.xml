@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teksturaderevo">
+
+    <Button
+        android:id="@+id/btMenuSoveti"
+        style="@style/menu_buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSous"
+        app:layout_constraintStart_toStartOf="@+id/btMenuVipechka"
+        app:layout_constraintTop_toTopOf="@+id/btMenuBack" />
+
+    <TextView
+        android:id="@+id/tvMenuSoveti"
+        style="@style/text_on_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/soveti2"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSoveti"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSoveti"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSoveti"
+        app:layout_constraintTop_toTopOf="@+id/btMenuSoveti"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btMenuJuice"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btMenuDesert"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMenuJuice"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/juice"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuJuice"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuJuice"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuJuice"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <ImageView
+        android:id="@+id/ivMenuJuice"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuJuice"
+        app:layout_constraintStart_toStartOf="@+id/btMenuJuice"
+        app:layout_constraintTop_toTopOf="@+id/btMenuJuice"
+        app:layout_constraintVertical_bias="0.141"
+        app:srcCompat="@mipmap/juice1" />
+
+    <Button
+        android:id="@+id/btMenuSous"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btMenuVipechka"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivMenuSous"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSous"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSous"
+        app:layout_constraintTop_toTopOf="@+id/btMenuSous"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@mipmap/sous" />
+
+    <TextView
+        android:id="@+id/tvMenuSous"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sous"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuSous"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuSous"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuSous"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <Button
+        android:id="@+id/btMenuDesert"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
+        app:layout_constraintStart_toEndOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat" />
+
+    <ImageView
+        android:id="@+id/ivMenuDesert"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuDesert"
+        app:layout_constraintStart_toStartOf="@+id/btMenuDesert"
+        app:layout_constraintTop_toTopOf="@+id/btMenuDesert"
+        app:layout_constraintVertical_bias="0.141"
+        app:srcCompat="@drawable/desert1" />
+
+    <TextView
+        android:id="@+id/tvMenuDesert"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/desert"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuDesert"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuDesert"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuDesert"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <Button
+        android:id="@+id/btMenuVipechka"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toEndOf="@+id/btMenuZakuski"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivMenuVipechka"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuVipechka"
+        app:layout_constraintStart_toStartOf="@+id/btMenuVipechka"
+        app:layout_constraintTop_toTopOf="@+id/btMenuVipechka"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@mipmap/cake" />
+
+    <TextView
+        android:id="@+id/tvMenuVipechka"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/vipechka"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuVipechka"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuVipechka"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuVipechka"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <Button
+        android:id="@+id/btMenuFirstBluda"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
+        app:layout_constraintStart_toEndOf="@+id/btMenuSalad"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivMenuFirstBluda"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuFirstBluda"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
+        app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
+        app:layout_constraintTop_toTopOf="@+id/btMenuFirstBluda"
+        app:layout_constraintVertical_bias="0.141"
+        app:srcCompat="@mipmap/sup" />
+
+    <TextView
+        android:id="@+id/tvMenuFirstBluda"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soup"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuFirstBluda"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuFirstBluda"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuFirstBluda"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuFirstBluda" />
+
+    <Button
+        android:id="@+id/btMenuZakuski"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivMenuZakuski"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuZakuski"
+        app:layout_constraintStart_toStartOf="@+id/btMenuZakuski"
+        app:layout_constraintTop_toTopOf="@+id/btMenuZakuski"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@mipmap/panini" />
+
+    <TextView
+        android:id="@+id/tvMenuZakuski"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/zakuski"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
+        app:layout_constraintEnd_toEndOf="@+id/ivMenuZakuski"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/ivMenuZakuski"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuZakuski"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <ImageView
+        android:id="@+id/ivMenuMeat3"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/meat" />
+
+    <Button
+        android:id="@+id/btMenuMeat"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuBack"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMenuMeat"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meat"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuMeat3" />
+
+    <Button
+        android:id="@+id/btMenuBack"
+        style="@style/menu_buttons"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:alpha="0.4"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuZakuski"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMenuBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/exit"
+        android:textColor="#806054"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btMenuBack"
+        app:layout_constraintTop_toTopOf="@+id/btMenuBack"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMenuSalad"
+        style="@style/text_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salad"
+        app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSalad"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSalad"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuSalad" />
+
+    <Button
+
+        android:id="@+id/btMenuSalad"
+        style="@style/menu_buttons"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivMenuSalad"
+        android:layout_width="125dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/btMenuSalad"
+        app:layout_constraintStart_toStartOf="@+id/btMenuSalad"
+        app:layout_constraintTop_toTopOf="@+id/btMenuSalad"
+        app:srcCompat="@mipmap/salad" />
+</androidx.constraintlayout.widget.ConstraintLayout>
