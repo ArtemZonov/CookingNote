@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/teksturaderevo"
+    android:background="@drawable/woodtexture"
     tools:context=".soveti.SovetiActivity">
 
     <EditText
@@ -15,8 +15,10 @@
         android:hint="@string/sovett"
         android:inputType="textMultiLine"
         android:padding="8dp"
-        android:textColor="#E6C594"
-        android:textColorHint="#88847D"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/ic_launcher_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +32,7 @@
         android:layout_marginBottom="16dp"
         android:alpha="0.5"
         android:text="@string/pictureSovet"
+        android:textColor="@color/ic_launcher_background"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/etSovet"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +47,7 @@
         android:layout_marginBottom="8dp"
         android:alpha="0.5"
         android:text="@string/prostoSovet"
+        android:textColor="@color/ic_launcher_background"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btPicturesSoveti"
         app:layout_constraintEnd_toEndOf="@+id/btPicturesSoveti"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/teksturaderevo"
+    android:background="@drawable/woodtexture"
     tools:context=".meat.EditMeatActivity">
 
     <EditText
@@ -23,8 +23,8 @@
         android:inputType="textMultiLine|textPersonName"
         android:padding="8dp"
         android:shadowColor="#040303"
-        android:textColor="#E6C594"
-        android:textColorHint="#88847D"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ic_launcher_background"
         android:textColorLink="@color/purple_500"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -47,8 +47,8 @@
         android:inputType="textMultiLine|textPersonName"
         android:padding="8dp"
         android:shadowColor="#040303"
-        android:textColor="#E6C594"
-        android:textColorHint="#88847D"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ic_launcher_background"
         android:textColorLink="@color/purple_500"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
