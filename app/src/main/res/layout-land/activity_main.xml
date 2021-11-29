@@ -68,7 +68,7 @@
         app:layout_constraintStart_toStartOf="@+id/btMenuJuice"
         app:layout_constraintTop_toTopOf="@+id/btMenuJuice"
         app:layout_constraintVertical_bias="0.141"
-        app:srcCompat="@mipmap/juice1" />
+        app:srcCompat="@drawable/ogurec" />
 
     <Button
         android:id="@+id/btMenuSous"
@@ -307,9 +307,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="@string/exit"
-        android:textColor="#806054"
-        android:textSize="24sp"
-        android:textStyle="bold"
+       style="@style/text_on_button"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
         app:layout_constraintEnd_toEndOf="@+id/btMenuBack"
         app:layout_constraintHorizontal_bias="0.0"
