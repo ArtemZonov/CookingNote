@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jkdajac.cookingnote.MainActivity
 import com.jkdajac.cookingnote.R
@@ -58,9 +60,22 @@ class VipechkaActivity : AppCompatActivity(), VipechkaAdapter.ViewHolder.ItemCal
     }
 
     override fun deleteItem(index: Int) {
-        val vipechka = vipechkaList[index]
-        vipechkaDatabase.vipechkaDao().deleteVipechka(vipechka)
-        getData()
-        adapter.notifyDataSetChanged()
+
+        val addDialog = AlertDialog.Builder(this)
+        addDialog
+            .setMessage("Вы действительно хотите удалить запись?")
+            .setPositiveButton("Ok") { dialog, _ ->
+                val vipechka = vipechkaList[index]
+                vipechkaDatabase.vipechkaDao().deleteVipechka(vipechka)
+                getData()
+                adapter.notifyDataSetChanged()
+                Toast.makeText(this, "Запись удалена!", Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
+            .setNegativeButton("Отмена") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .create()
+            .show()
     }
 }
