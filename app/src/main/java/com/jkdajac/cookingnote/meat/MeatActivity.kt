@@ -44,6 +44,8 @@ class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
             btMeatBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingMeat.setOnClickListener {
@@ -51,7 +53,17 @@ class MeatActivity : AppCompatActivity(), MeatAdapter.ViewHolder.ItemCallback {
             floatingMeat.startAnimation(animation)
             val intent = Intent(this, EditMeatActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getData() {

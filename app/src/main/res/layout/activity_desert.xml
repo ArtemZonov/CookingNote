@@ -19,13 +19,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvDesertBack"
         style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="@string/toUp"
         app:layout_constraintBottom_toBottomOf="@+id/btDesertBack"
@@ -54,5 +56,6 @@
         app:backgroundTint="#654009"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

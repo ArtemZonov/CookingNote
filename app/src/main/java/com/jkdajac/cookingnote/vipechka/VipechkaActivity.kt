@@ -43,6 +43,8 @@ class VipechkaActivity : AppCompatActivity(), VipechkaAdapter.ViewHolder.ItemCal
             btVipechkaBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingVipechkaEdit.setOnClickListener {
@@ -50,7 +52,17 @@ class VipechkaActivity : AppCompatActivity(), VipechkaAdapter.ViewHolder.ItemCal
             floatingVipechkaEdit.startAnimation(animation)
             val intent = Intent(this, EditVipechkaActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getData() {

@@ -42,6 +42,8 @@ class EditZakuskiActivity : AppCompatActivity() {
 
                 val intent = Intent(this, ZakuskiActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(0, R.anim.open_activity)
+                finish()
             } else {
                 Toast.makeText(
                     this, "Пожалуйста, заполните пустые поля !",
@@ -50,6 +52,14 @@ class EditZakuskiActivity : AppCompatActivity() {
             }
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, ZakuskiActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getMyIntents() {

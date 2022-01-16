@@ -15,13 +15,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
         app:layout_constraintEnd_toEndOf="@+id/btMenuSous"
         app:layout_constraintStart_toStartOf="@+id/btMenuVipechka"
-        app:layout_constraintTop_toTopOf="@+id/btMenuBack" />
+        app:layout_constraintTop_toTopOf="@+id/btMenuBack"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuSoveti"
         style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="@string/soveti2"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSoveti"
@@ -43,7 +45,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btMenuDesert"
         app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuJuice"
@@ -51,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/juice"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuJuice"
@@ -82,7 +86,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btMenuVipechka"
         app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuSous"
@@ -101,6 +106,7 @@
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/sous"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuSous"
@@ -118,7 +124,8 @@
         android:alpha="0.4"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
         app:layout_constraintStart_toEndOf="@+id/btMenuFirstBluda"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuDesert"
@@ -137,6 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/desert"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuDesert"
@@ -155,7 +163,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintStart_toEndOf="@+id/btMenuZakuski"
         app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuVipechka"
@@ -174,6 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/vipechka"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuVipechka"
@@ -192,7 +202,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
         app:layout_constraintStart_toEndOf="@+id/btMenuSalad"
         app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuFirstBluda"
@@ -210,8 +221,9 @@
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/soup"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuFirstBluda"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuFirstBluda"
         app:layout_constraintStart_toStartOf="@+id/ivMenuFirstBluda"
@@ -227,7 +239,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintStart_toEndOf="@+id/btMenuMeat"
         app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuZakuski"
@@ -246,6 +259,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/zakuski"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuZakuski"
@@ -277,14 +291,17 @@
         app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btMenuBack"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuMeat"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/meat"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
@@ -299,15 +316,17 @@
         app:layout_constraintEnd_toEndOf="@+id/btMenuZakuski"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuBack"
+        style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="@string/exit"
-       style="@style/text_on_button"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
         app:layout_constraintEnd_toEndOf="@+id/btMenuBack"
         app:layout_constraintHorizontal_bias="0.0"
@@ -320,6 +339,7 @@
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/salad"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
         app:layout_constraintEnd_toEndOf="@+id/btMenuSalad"
@@ -338,7 +358,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
         app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuSalad"

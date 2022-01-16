@@ -41,6 +41,8 @@ class EditVipechkaActivity : AppCompatActivity() {
 
                 val intent = Intent(this, VipechkaActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(0, R.anim.open_activity)
+                finish()
             } else {
                 Toast.makeText(
                     this, "Пожалуйста, заполните пустые поля !",
@@ -49,6 +51,14 @@ class EditVipechkaActivity : AppCompatActivity() {
             }
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, VipechkaActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
     fun getMyIntents() {
 

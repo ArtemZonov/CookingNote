@@ -28,6 +28,8 @@ class EditDesertActivity : AppCompatActivity() {
                 floatingDesertSaved.setOnClickListener {
                     val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
                     floatingDesertSaved.startAnimation(animation)
+                    overridePendingTransition(0, R.anim.open_activity)
+                    finish()
 
                     if (etEditDesertName.text.isNotEmpty() && etEditDesertContent.text.isNotEmpty()) {
                         val englishWord: String = etEditDesertName.text.toString()
@@ -41,6 +43,8 @@ class EditDesertActivity : AppCompatActivity() {
 
                         val intent = Intent(this, DesertActivity::class.java)
                         startActivity(intent)
+                        overridePendingTransition(0, R.anim.open_activity)
+                        finish()
                     } else {
                         Toast.makeText(
                             this, "Пожалуйста, заполните пустые поля !",
@@ -50,6 +54,14 @@ class EditDesertActivity : AppCompatActivity() {
                     finish()
                 }
             }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this,DesertActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
+    }
 
     fun getMyIntents() {
 

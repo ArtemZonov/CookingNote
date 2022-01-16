@@ -44,6 +44,8 @@ class JuiceActivity : AppCompatActivity(), JuiceAdapter.ViewHolder.ItemCallback 
             btJuiceBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingJuiceEdit.setOnClickListener {
@@ -51,9 +53,18 @@ class JuiceActivity : AppCompatActivity(), JuiceAdapter.ViewHolder.ItemCallback 
             floatingJuiceEdit.startAnimation(animation)
             val intent = Intent(this, EditJuiceActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
+    }
 
     fun getData() {
         val wordFromDb: List<Juice> = juiceDatabase.juiceDao().getAll()

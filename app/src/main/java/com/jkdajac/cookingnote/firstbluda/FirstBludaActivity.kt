@@ -39,6 +39,8 @@ class FirstBludaActivity : AppCompatActivity(), FirstbludaAdapter.ViewHolder.Ite
             btFirstbludaBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingEditFirstbluda.setOnClickListener {
@@ -46,7 +48,17 @@ class FirstBludaActivity : AppCompatActivity(), FirstbludaAdapter.ViewHolder.Ite
             floatingEditFirstbluda.startAnimation(animation)
             val intent = Intent(this, EditFirstbludaActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getData() {

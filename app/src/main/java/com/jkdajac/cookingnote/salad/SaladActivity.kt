@@ -43,6 +43,8 @@ class SaladActivity : AppCompatActivity(), SaladAdapter.ViewHolder.ItemCallback 
             btSaladBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingSaladEdit.setOnClickListener {
@@ -50,7 +52,17 @@ class SaladActivity : AppCompatActivity(), SaladAdapter.ViewHolder.ItemCallback 
             floatingSaladEdit.startAnimation(animation)
             val intent = Intent(this, EditSaladActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
 

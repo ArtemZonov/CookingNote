@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
                 ivMenuMeat.startAnimation(animation)
             val intent = Intent(this, MeatActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
             }
 
         btMenuZakuski.setOnClickListener {
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuZakuski.startAnimation(animation)
             val intent = Intent(this, ZakuskiActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuVipechka.setOnClickListener {
@@ -49,6 +53,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuVipechka.startAnimation(animation)
             val intent = Intent(this, VipechkaActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuSous.setOnClickListener {
@@ -58,6 +64,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuSous.startAnimation(animation)
             val intent = Intent(this, SousActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuFirstBluda.setOnClickListener {
@@ -67,6 +75,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuFirstBluda.startAnimation(animation)
             val intent = Intent(this, FirstBludaActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuSalad.setOnClickListener {
@@ -76,6 +86,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuSalad.startAnimation(animation)
             val intent = Intent(this, SaladActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuDesert.setOnClickListener {
@@ -85,6 +97,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuDesert.startAnimation(animation)
             val intent = Intent(this, DesertActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuJuice.setOnClickListener {
@@ -94,6 +108,8 @@ class MainActivity : AppCompatActivity() {
             ivMenuJuice.startAnimation(animation)
             val intent = Intent(this, JuiceActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
         btMenuSoveti.setOnClickListener {
@@ -102,6 +118,8 @@ class MainActivity : AppCompatActivity() {
             tvMenuSoveti.startAnimation(animation)
             val intent = Intent(this, SovetiActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
         btMenuBack.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)

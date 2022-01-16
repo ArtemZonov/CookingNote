@@ -9,11 +9,12 @@
 
     <TextView
         android:id="@+id/tvMenuBack"
+        style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="@string/exit"
-        style="@style/text_on_button"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuBack"
         app:layout_constraintEnd_toEndOf="@+id/btMenuBack"
         app:layout_constraintStart_toStartOf="@+id/btMenuBack"
@@ -27,13 +28,15 @@
         app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuFirstBluda" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuFirstBluda"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuSalad"
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/salad"
         android:textColor="@color/purple_700"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSalad"
@@ -64,7 +67,8 @@
         app:layout_constraintHorizontal_bias="0.013"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btMenuBack"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuFirstBluda"
@@ -76,7 +80,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btMenuMeat"
         app:layout_constraintTop_toTopOf="@+id/btMenuMeat"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuZakuski"
@@ -84,7 +89,8 @@
         android:alpha="0.4"
         app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuMeat"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuVipechka"
@@ -92,7 +98,8 @@
         android:alpha="0.4"
         app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuZakuski" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuZakuski"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuDesert"
@@ -101,7 +108,8 @@
         app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuSalad" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuSalad"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuSous"
@@ -110,7 +118,8 @@
         app:layout_constraintEnd_toEndOf="@+id/btMenuMeat"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuVipechka" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuVipechka"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btMenuJuice"
@@ -118,7 +127,8 @@
         android:alpha="0.4"
         app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintStart_toStartOf="@+id/btMenuFirstBluda"
-        app:layout_constraintTop_toBottomOf="@+id/btMenuDesert" />
+        app:layout_constraintTop_toBottomOf="@+id/btMenuDesert"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivMenuMeat"
@@ -213,7 +223,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/meat"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuMeat"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuMeat"
         app:layout_constraintStart_toStartOf="@+id/ivMenuMeat"
@@ -226,7 +238,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/soup"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btMenuSalad"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuFirstBluda"
         app:layout_constraintHorizontal_bias="0.488"
@@ -240,6 +254,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/zakuski"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuZakuski"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuZakuski"
@@ -253,6 +268,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/vipechka"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuVipechka"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuVipechka"
@@ -267,6 +283,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/desert"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuDesert"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuDesert"
@@ -279,6 +296,7 @@
         style="@style/text_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/sous"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuSous"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuSous"
@@ -292,6 +310,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/dserasercyr1"
         android:text="@string/juice"
         app:layout_constraintBottom_toBottomOf="@+id/btMenuJuice"
         app:layout_constraintEnd_toEndOf="@+id/ivMenuJuice"
@@ -310,13 +329,15 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/btMenuSous"
         app:layout_constraintTop_toBottomOf="@+id/btMenuSous"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvMenuSoveti"
         style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="@string/soveti2"
         android:textColor="@color/purple_700"
@@ -332,8 +353,10 @@
         android:layout_height="54dp"
         android:layout_marginTop="8dp"
         android:alpha="0.4"
+        android:fontFamily="@font/dserasercyr1"
         app:layout_constraintEnd_toEndOf="@+id/btMenuFirstBluda"
         app:layout_constraintStart_toStartOf="@+id/btMenuMeat"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

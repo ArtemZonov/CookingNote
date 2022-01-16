@@ -44,6 +44,8 @@ class DesertActivity : AppCompatActivity(), DesertAdapter.ViewHolder.ItemCallbac
             btDesertBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingDesertEdit.setOnClickListener {
@@ -51,7 +53,17 @@ class DesertActivity : AppCompatActivity(), DesertAdapter.ViewHolder.ItemCallbac
             floatingDesertEdit.startAnimation(animation)
             val intent = Intent(this, EditDesertActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getData() {

@@ -39,6 +39,8 @@ class ZakuskiActivity : AppCompatActivity(), ZakuskiAdapter.ViewHolder.ItemCallb
             btZakuskiBack.startAnimation(animation)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
 
         }
         floatingZakuskiEdit.setOnClickListener {
@@ -46,8 +48,18 @@ class ZakuskiActivity : AppCompatActivity(), ZakuskiAdapter.ViewHolder.ItemCallb
             floatingZakuskiEdit.startAnimation(animation)
             val intent = Intent(this, EditZakuskiActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, R.anim.open_activity)
+            finish()
         }
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, MainActivity :: class.java)
+        startActivity(intent)
+        overridePendingTransition(0, R.anim.open_activity)
+        finish()
     }
 
     fun getData() {

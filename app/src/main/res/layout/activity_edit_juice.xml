@@ -30,7 +30,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etEditJuiceContent"
@@ -69,6 +70,7 @@
         app:backgroundTint="#654009"
         app:layout_constraintBottom_toBottomOf="@+id/etEditJuiceContent"
         app:layout_constraintEnd_toEndOf="@+id/etEditJuiceContent"
-        app:srcCompat="@android:drawable/ic_menu_save" />
+        app:srcCompat="@android:drawable/ic_menu_save"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
