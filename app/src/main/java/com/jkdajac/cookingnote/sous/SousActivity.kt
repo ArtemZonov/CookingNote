@@ -9,14 +9,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jkdajac.cookingnote.MainActivity
 import com.jkdajac.cookingnote.R
-import com.jkdajac.cookingnote.adapters.SaladAdapter
 import com.jkdajac.cookingnote.adapters.SousAdapter
-import com.jkdajac.cookingnote.database.salad.AppDatabase
-import com.jkdajac.cookingnote.database.salad.Salad
 import com.jkdajac.cookingnote.database.sous.Sous
-import com.jkdajac.cookingnote.salad.EditSaladActivity
-import kotlinx.android.synthetic.main.activity_salad.*
-import kotlinx.android.synthetic.main.activity_salad.floatingSaladEdit
 import kotlinx.android.synthetic.main.activity_sous.*
 
 class SousActivity : AppCompatActivity(), SousAdapter.ViewHolder.ItemCallback {
@@ -48,9 +42,9 @@ class SousActivity : AppCompatActivity(), SousAdapter.ViewHolder.ItemCallback {
             finish()
 
         }
-        floatingSousEdit.setOnClickListener {
+        floatingSovetiEdit.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
-            floatingSousEdit.startAnimation(animation)
+            floatingSovetiEdit.startAnimation(animation)
             val intent = Intent(this, EditSousActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, R.anim.open_activity)

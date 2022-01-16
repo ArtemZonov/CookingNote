@@ -11,8 +11,8 @@
     <string name="juice">Соленья</string>
     <string name="soveti2">Полезные советы</string>
     <string name="toUp">Выйти на главную</string>
-    <string name="hintName">Напишите здесь название рецепта</string>
-    <string name="hintContent">Напишите здесь свой рецепт</string>
+    <string name="hintName">Напишите здесь название совета</string>
+    <string name="hintContent">Напишите здесь свой совет</string>
     <string name="sovett">Запишите здесь ваш совет</string>
     <string name="prostoSovet">Просто совет</string>
     <string name="pictureSovet">Советы в картинках</string>

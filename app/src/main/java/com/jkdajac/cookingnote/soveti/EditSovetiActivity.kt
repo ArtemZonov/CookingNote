@@ -1,4 +1,4 @@
-package com.jkdajac.cookingnote.vipechka
+package com.jkdajac.cookingnote.soveti
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,20 +7,25 @@ import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.jkdajac.cookingnote.MyIntentConstance
 import com.jkdajac.cookingnote.R
-import com.jkdajac.cookingnote.database.vipechka.AppDatabase
-import com.jkdajac.cookingnote.database.vipechka.Vipechka
-import kotlinx.android.synthetic.main.activity_edit_vipechka.*
+import com.jkdajac.cookingnote.database.salad.Salad
+import com.jkdajac.cookingnote.database.soveti.AppDatabase
+import com.jkdajac.cookingnote.database.soveti.Soveti
+import com.jkdajac.cookingnote.salad.SaladActivity
+import kotlinx.android.synthetic.main.activity_edit_salad.*
+import kotlinx.android.synthetic.main.activity_edit_salad.floatingSaladSaved
+import kotlinx.android.synthetic.main.activity_edit_soveti.*
 
-class EditVipechkaActivity : AppCompatActivity() {
+class EditSovetiActivity : AppCompatActivity() {
 
-    lateinit var vipechkaDatabase: AppDatabase
+    lateinit var sovetiDatabase: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_vipechka)
+        setContentView(R.layout.activity_edit_soveti)
+
 
         getMyIntents()
-        vipechkaDatabase = AppDatabase.getDatabase(this)
+        sovetiDatabase = AppDatabase.getDatabase(this)
 
         floatingSovetiSaved.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(this, R.anim.scale)
@@ -31,12 +36,12 @@ class EditVipechkaActivity : AppCompatActivity() {
                 val translateWord: String = etEditSovetiContent.text.toString()
 
 
-                val vipechka = Vipechka(englishWord = englishWord, translateWord = translateWord)
+                val soveti = Soveti(englishWord = englishWord, translateWord = translateWord)
                 Toast.makeText(this, "Ваш рецепт записан !", Toast.LENGTH_LONG)
                     .show()
-                vipechkaDatabase.vipechkaDao().insertVipechka(vipechka)
+                sovetiDatabase.sovetiDao().insertSoveti(soveti)
 
-                val intent = Intent(this, VipechkaActivity::class.java)
+                val intent = Intent(this, SovetiActivity::class.java)
                 startActivity(intent)
                 overridePendingTransition(0, R.anim.open_activity)
                 finish()
@@ -52,19 +57,20 @@ class EditVipechkaActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        val intent = Intent(this, VipechkaActivity :: class.java)
+        val intent = Intent(this, SovetiActivity :: class.java)
         startActivity(intent)
         overridePendingTransition(0, R.anim.open_activity)
         finish()
     }
+
     fun getMyIntents() {
 
         val i = intent
 
         if (i != null) {
-            if (i.getStringExtra(MyIntentConstance.I_VIPECHKANAME_KEY) != null) {
-                etEditSovetiName.setText(i.getStringExtra(MyIntentConstance.I_VIPECHKANAME_KEY))
-                etEditSovetiContent.setText(i.getStringExtra(MyIntentConstance.I_VIPECHKACONTENT_KEY))
+            if (i.getStringExtra(MyIntentConstance.I_SOVETINAME_KEY) != null) {
+                etEditSovetiName.setText(i.getStringExtra(MyIntentConstance.I_SOVETINAME_KEY))
+                etEditSovetiContent.setText(i.getStringExtra(MyIntentConstance.I_SOVETICONTENT_KEY))
             }
         }
     }

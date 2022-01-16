@@ -7,38 +7,33 @@
     android:background="@drawable/woodtexture"
     tools:context=".soveti.SovetiActivity">
 
-    <EditText
-        android:id="@+id/etSovet"
+    <Button
+        android:id="@+id/btMainMenuBackSoveti"
+        style="@style/menu_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:alpha="0.4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvMainMenuBackSoveti"
+        style="@style/text_on_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="start"
-        android:hint="@string/sovett"
-        android:inputType="textMultiLine"
-        android:padding="8dp"
-        android:textColor="@color/purple_700"
-        android:textColorHint="@color/ic_launcher_background"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btPicturesSoveti"
-        style="@style/menu_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:alpha="0.5"
         android:fontFamily="@font/dserasercyr1"
-        android:text="@string/pictureSovet"
-        android:textColor="@color/ic_launcher_background"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/etSovet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:gravity="center"
+        android:text="@string/toUp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMainMenuBackSoveti"
+        app:layout_constraintEnd_toEndOf="@+id/btMainMenuBackSoveti"
+        app:layout_constraintStart_toStartOf="@+id/btMainMenuBackSoveti"
+        app:layout_constraintTop_toTopOf="@+id/btMainMenuBackSoveti" />
 
     <Button
         android:id="@+id/btProstoSoveti"
@@ -53,6 +48,50 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btPicturesSoveti"
         app:layout_constraintEnd_toEndOf="@+id/btPicturesSoveti"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btPicturesSoveti" />
+
+    <Button
+        android:id="@+id/btPicturesSoveti"
+        style="@style/menu_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/dserasercyr1"
+        android:text="@string/pictureSovet"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSoveti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btProstoSoveti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btMainMenuBackSoveti" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingSovetiEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.6"
+        android:clickable="true"
+        app:backgroundTint="#654009"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSoveti"
+        app:layout_constraintEnd_toEndOf="@+id/rvSoveti"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
