@@ -49,7 +49,6 @@ class EditMeatActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
 
 

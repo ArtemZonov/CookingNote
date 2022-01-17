@@ -50,7 +50,6 @@ class EditZakuskiActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

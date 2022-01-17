@@ -45,7 +45,6 @@ class EditFirstbludaActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

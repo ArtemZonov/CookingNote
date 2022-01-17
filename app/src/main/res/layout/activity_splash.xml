@@ -15,7 +15,7 @@
         android:fontFamily="@font/dserasercyr1"
         android:gravity="center"
         android:text="Кулинарный \t\nБлокнот"
-        android:textSize="48sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView10"
         app:layout_constraintHorizontal_bias="0.45"

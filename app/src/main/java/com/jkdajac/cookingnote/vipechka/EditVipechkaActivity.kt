@@ -46,7 +46,6 @@ class EditVipechkaActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

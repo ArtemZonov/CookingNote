@@ -50,7 +50,6 @@ class EditJuiceActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

@@ -45,7 +45,6 @@ class EditSaladActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

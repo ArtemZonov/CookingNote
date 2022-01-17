@@ -50,7 +50,6 @@ class EditSousActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                    finish()
                 }
     }
 

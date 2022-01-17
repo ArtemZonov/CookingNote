@@ -51,7 +51,6 @@ class EditSovetiActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            finish()
         }
     }
 

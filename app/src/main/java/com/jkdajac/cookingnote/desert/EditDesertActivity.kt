@@ -51,7 +51,6 @@ class EditDesertActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                    finish()
                 }
             }
 
